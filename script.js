@@ -1,4 +1,4 @@
-const BLOW_THRESHOLD = 100; // Adjust this value to detect blowing
+const BLOW_THRESHOLD = 50; // Adjust this value to detect blowing
 const NUMBER_OF_CANDLES = 5; // Total number of candles
 
 const video = document.getElementById('video');
