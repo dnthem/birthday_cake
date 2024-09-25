@@ -1,0 +1,140 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300italic);
+
+
+
+/* General page styling */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #282c34;
+  font-family: 'Lato', sans-serif;
+}
+
+.wishes {
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+
+}
+
+video {
+  aspect-ratio: 16 / 9;
+  width: 50%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* Cake container */
+.cake {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Cake layers */
+.layer {
+  width: 300px;
+  height: 60px;
+  border-radius: 25px 25px 0 0;
+  margin-bottom: 0;
+  position: relative;
+}
+
+.bottom-layer {
+  width: 300px;
+  background-color: #c69553;
+  z-index: 1;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.middle-layer {
+  width: 240px;
+  background-color: #f7d7a2;
+  z-index: 2;
+}
+
+.top-layer {
+  width: 180px;
+  background-color: #ffefd5;
+  z-index: 3;
+}
+
+.plate {
+  width: 350px;
+  height: 10px;
+  background-color: #ffffff;
+  position: relative;
+  z-index: 5;
+}
+
+/* Candles positioned on top of the cake */
+.candles-container {
+  position: absolute;
+  top: -50px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+
+  
+}
+
+/* Candle styling */
+.candle {
+  position: relative;
+  width: 15px;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  z-index: 4;
+}
+
+.wick {
+  position: absolute;
+  top: -3px;
+  width: 3px;
+  height: 10px;
+  left: calc(50% - 1.5px);
+  background-color: rgb(142, 142, 142);
+  border-radius: 50%;
+}
+
+/* Flame styles */
+.flame {
+  position: absolute;
+  top: -20px;
+  width: 15px;
+  height: 20px;
+  background-color: orange;
+  border-radius: 50% 50% 20% 20%;
+  animation: flicker 1s infinite ease-in-out;
+  box-shadow: 0px 0px 10px 5px orange;
+}
+
+/* Flame flickering effect */
+@keyframes flicker {
+  0%, 100% {
+      transform: translateY(0px) scale(1);
+      opacity: 1;
+  }
+  50% {
+      transform: translateY(-3px) scale(1.05);
+      opacity: 0.8;
+  }
+}
+
+.clue {
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.hidden {
+  display: none;
+}
