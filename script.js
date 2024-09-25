@@ -1,4 +1,4 @@
-const BLOW_THRESHOLD = 150; // Adjust this value to detect blowing
+const BLOW_THRESHOLD = 100; // Adjust this value to detect blowing
 const NUMBER_OF_CANDLES = 5; // Total number of candles
 
 const video = document.getElementById('video');
@@ -90,14 +90,17 @@ function randomlyPutOutCandles() {
   }
 }
 
-// Create candles and start listening for microphone input
-createCandles();
-video.play();
 function triggerAfterVideoIsPlayed() {
-  const clue = document.getElementsByClassName('clue');
+console.log('Video has ended');
+  const clue = document.getElementById('clue');
   clue.classList.remove('hidden');
   getMicrophoneInput();
 }
 
+// Create candles and start listening for microphone inpu
 
-video.addEventListener('ended', triggerAfterVideoIsPlayed);
+document.addEventListener('DOMContentLoaded', () => {
+    createCandles();
+    video.play();
+    video.addEventListener('ended', triggerAfterVideoIsPlayed);
+});
